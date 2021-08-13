@@ -138,9 +138,21 @@ return object['home']['teamName']
 console.log(homeTeamName())
 // logs "Brooklyn Nets"
 
-function numPointsScored(givenName){
-  let object = gameObject()
+function getAllPlayers(){
+  const game = gameObject()
+  return Object.assign({}, game.home.players, game.away.players)
 }
+
+function numPointsScored(givenName){
+  const allPlayers = getAllPlayers()
+  return allPlayers[givenName].points
+}
+
+function shoeSize(givenName){
+  const allPlayers = getAllPlayers()
+  return allPlayers[givenName].shoe
+}
+
 
 function teamColors(givenTeamName){
   let object = gameObject()
@@ -149,4 +161,30 @@ function teamColors(givenTeamName){
       return object[key].colors
     }
   }
+}
+
+function teamNames(){
+  let game = gameObject()
+  let arrayOfTeamNames = []
+  arrayOfTeamNames.push(game.home.teamName)
+  arrayOfTeamNames.push(game.away.teamName)
+  return arrayOfTeamNames
+}
+
+function playerNumbers(teamName){
+  let game = gameObject()
+  let arrayOfNumbers= []
+  for (key in game){
+    if(game[key].teamName === teamName){
+      const playersOfTeam = game[key].players
+      for (player in playersOfTeam)
+      arrayOfNumbers = arrayOfNumbers.push(playersOfTeam[player].number)
+      return arrayOfNumbers
+    }
+  }
+}
+
+function playersStats(givenName){
+  const allPlayers = getAllPlayers()
+  return allPlayers[givenName]
 }
