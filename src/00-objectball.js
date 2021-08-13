@@ -1,4 +1,4 @@
-function gameObject() {
+function gameObject(game) {
     let game = {
       home: {
         teamName: 'Brooklyn Nets',
@@ -15,6 +15,7 @@ function gameObject() {
             blocks: 1,
             slamDunks: 1
           },
+
           reggieEvans: {
             number: 30,
             shoe: 14,
@@ -25,6 +26,7 @@ function gameObject() {
             blocks: 12,
             slamDunks: 7
           },
+
           brookLopez: {
             number: 11,
             shoe: 17,
@@ -35,6 +37,7 @@ function gameObject() {
             blocks: 1,
             slamDunks: 15
           },
+
           masonPlumlee: {
             number: 1,
             shoe: 19,
@@ -45,6 +48,7 @@ function gameObject() {
             blocks: 8,
             slamDunks: 5
           },
+
           jasonTerry: {
             number: 31,
             shoe: 15,
@@ -63,6 +67,7 @@ function gameObject() {
         colors: ['Turquoise', 'Purple'],
   
         players: {
+
           jeffAdrien: {
             number: 4,
             shoe: 18,
@@ -73,6 +78,7 @@ function gameObject() {
             blocks: 7,
             slamDunks: 2
           },
+
           bismakBiyombo: {
             number: 0,
             shoe: 16,
@@ -83,6 +89,7 @@ function gameObject() {
             blocks: 15,
             slamDunks: 10
           },
+
           deSagnaDiop: {
             number: 2,
             shoe: 14,
@@ -93,6 +100,7 @@ function gameObject() {
             blocks: 5,
             slamDunks: 5
           },
+
           benGordon: {
             number: 4,
             shoe: 15,
@@ -103,6 +111,7 @@ function gameObject() {
             blocks: 1,
             slamDunks: 0
           },
+
           brendanHaywood: {
             number: 33,
             shoe: 15,
@@ -118,4 +127,7 @@ function gameObject() {
     }
     return game;
   }
+
+ console.log(gameObject(game));
+
   
