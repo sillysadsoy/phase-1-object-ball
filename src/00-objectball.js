@@ -3,7 +3,6 @@ function gameObject() {
     home: {
       teamName: 'Brooklyn Nets',
       colors: ['Black', 'White'],
-
       players: {
         alanAnderson: {
           number: 0,
@@ -125,6 +124,7 @@ function gameObject() {
       }
     }
   }
+  //debugger
   return game;
 }
 
@@ -137,3 +137,16 @@ return object['home']['teamName']
 
 console.log(homeTeamName())
 // logs "Brooklyn Nets"
+
+function numPointsScored(givenName){
+  let object = gameObject()
+}
+
+function teamColors(givenTeamName){
+  let object = gameObject()
+  for (key in object){
+    if(object[key].teamName === givenTeamName){
+      return object[key].colors
+    }
+  }
+}
