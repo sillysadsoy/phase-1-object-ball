@@ -138,9 +138,51 @@ return object['home']['teamName']
 console.log(homeTeamName())
 // logs "Brooklyn Nets"
 
-function numPointsScored(givenName){
-  let object = gameObject()
+
+
+
+
+// function numPointsScored(givenPlayerName){
+//   let object = gameObject()
+//   for (key in object){
+//       let team = object[key]
+//       for()
+
+//     if(object[key].players === givenName)
+//     return object[key].players[givenName].points
+//   }
+// }
+
+function numPointsScored(playerName) {
+    //combine players into one object
+    const game = gameObject();
+    const allPlayers = Object.assign({}, game.home.players, game.away.players);
+    //const allPlayers = {...game.home.players, game.away.players} --> either way works 
+
+    for(player in allPlayers){
+        if(player === playerName) {
+            return allPlayers[player].points
+            }
+    }
+
+    console.log(allPlayers[playerName]);
+    //return allPlayers[playerName].points instead of for loops
 }
+
+// //function getAllPlayers(){
+//     const game = gameObject();
+//     const allPlayers = Object.assign({}, game.home.players, game.away.players);
+//         return allPlayers;
+// }
+
+
+
+
+
+
+
+
+
 
 function teamColors(givenTeamName){
   let object = gameObject()
